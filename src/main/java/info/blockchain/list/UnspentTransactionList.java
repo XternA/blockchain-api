@@ -1,19 +1,16 @@
-package info.blockchain.handler;
+package info.blockchain.list;
 
 import com.google.gson.annotations.SerializedName;
 import info.blockchain.transaction.UnspentTransaction;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-import java.util.LinkedList;
 import java.util.List;
 
+@AllArgsConstructor
 @Getter
-public final class UnspentTransactionHandler {
+public final class UnspentTransactionList {
 
     @SerializedName("unspent_outputs")
     private final List<UnspentTransaction> unspentOutputs;
-
-    public UnspentTransactionHandler(LinkedList<UnspentTransaction> unspentOutputs) {
-        this.unspentOutputs = unspentOutputs;
-    }
 }
