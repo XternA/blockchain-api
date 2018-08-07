@@ -1,2 +1,2 @@
 # blockchain-api
-Blockhain.com coding assignment
+Blockchain.com coding assignment
