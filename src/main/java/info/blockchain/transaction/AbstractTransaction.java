@@ -7,6 +7,6 @@ import lombok.Getter;
 @Getter
 abstract class AbstractTransaction {
 
-    private final long value;
-    private final String tx_hash;
+    protected final long value;
+    protected final String tx_hash;
 }
