@@ -6,7 +6,7 @@
 
     <groupId>info.blockchain</groupId>
     <artifactId>blockchain-rest-endpoint</artifactId>
-    <version>0.0.8-SNAPSHOT</version>
+    <version>0.0.9-SNAPSHOT</version>
 
     <name>blockchain-rest-endpoint</name>
     <description>Blockchain coding assignment</description>
