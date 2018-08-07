@@ -1,7 +1,6 @@
 package info.blockchain.handler;
 
 import info.blockchain.client.BlockchainExplorerClient;
-import info.blockchain.exception.RequestException;
 import info.blockchain.list.TransactionList;
 import info.blockchain.transaction.Transaction;
 import info.blockchain.transaction.Transaction.TransactionBuilder;
@@ -19,7 +18,7 @@ public class TransactionHandler implements ITransactionHandler {
     private final BlockchainExplorerClient blockchainExplorerClient;
 
     @Override
-    public final TransactionList getUnspentTransactions(String walletAddress) throws RequestException {
+    public final TransactionList getUnspentTransactions(String walletAddress) throws Exception {
         return TransactionList.builder()
                 .outputs(mapTransactions(blockchainExplorerClient.getUnspentTransactions(walletAddress)))
                 .build();

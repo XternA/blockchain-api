@@ -1,10 +1,8 @@
 package info.blockchain.transaction;
 
 import lombok.Getter;
-import lombok.ToString;
 
 @Getter
-@ToString
 public final class UnspentTransaction extends AbstractTransaction {
 
     private final String tx_hash_big_endian;

@@ -12,5 +12,5 @@ public interface ITransactionHandler {
      * @return A TransactionList object which holds a list of all the unspent transaction for the given wallet address.
      * @throws RequestException Throws exception when there's something wrong with the request.
      */
-    TransactionList getUnspentTransactions(String walletAddress) throws RequestException;
+    TransactionList getUnspentTransactions(String walletAddress) throws Exception;
 }

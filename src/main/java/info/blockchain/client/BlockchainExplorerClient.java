@@ -13,17 +13,19 @@ import java.util.List;
 
 @Named
 @AllArgsConstructor
-public final class BlockchainExplorerClient {
+public class BlockchainExplorerClient {
 
     private final RestTemplate restTemplate;
     private final Gson jsonConverter;
 
-    public List<UnspentTransaction> getUnspentTransactions(String walletAddress) throws RequestException {
+    public List<UnspentTransaction> getUnspentTransactions(String walletAddress) throws Exception {
         try {
             final String jsonResponse = restTemplate.getForObject("https://blockchain.info/unspent?active=" + walletAddress, String.class);
             return jsonConverter.fromJson(jsonResponse, UnspentTransactionList.class).getUnspentOutputs();
         } catch (HttpServerErrorException e) {
-            throw new RequestException("Something went wrong. Please contact Blockchain.com for further assistance.");
+            throw new RequestException("Something went wrong with the HTTP request. Please contact Blockchain.com for further assistance.", e);
+        } catch (Exception e) {
+            throw new RequestException("Something went wrong. Please contact Blockchain.com for further assistance.", e);
         }
     }
 }
