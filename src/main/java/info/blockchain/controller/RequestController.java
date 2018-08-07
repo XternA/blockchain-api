@@ -22,7 +22,7 @@ public final class RequestController {
 
     @GetMapping(value = "/address/{wallet}")
     @ResponseBody
-    public final ResponseEntity<?> getUnspentTransaction(@PathVariable(value = "wallet") String walletAddress) {
+    public final ResponseEntity<?> getUnspentTransaction(@PathVariable(value = "wallet") String walletAddress) throws Exception {
         return new ResponseEntity<>(handler.getUnspentTransactions(walletAddress), HttpStatus.OK);
     }
 }

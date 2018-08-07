@@ -1,7 +1,7 @@
 package info.blockchain.handler;
 
 import com.google.gson.annotations.SerializedName;
-import info.blockchain.data.UnspentTransaction;
+import info.blockchain.transaction.UnspentTransaction;
 import lombok.Getter;
 
 import java.util.LinkedList;

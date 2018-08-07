@@ -1,6 +1,6 @@
 package info.blockchain.handler;
 
-import info.blockchain.data.Transaction;
+import info.blockchain.transaction.Transaction;
 import lombok.Getter;
 
 import javax.inject.Named;
@@ -15,5 +15,9 @@ public final class TransactionHandler {
 
     public void addUnspentTransaction(Transaction transaction) {
         outputs.add(transaction);
+    }
+
+    public void clearTransactionOutputs() {
+        outputs.clear();
     }
 }
