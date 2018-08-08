@@ -1,0 +1,19 @@
+{
+   "outputs":[
+      {
+         "value":1685235,
+         "tx_hash":"b94313cb3d8ce36ad270d43fd155111a2495f43d8d156f9b570448d22f3dc739",
+         "output_idx":13
+      },
+      {
+         "value":2865979,
+         "tx_hash":"946053b712c163165ff098ea1a7567856dccba3c0c17d9c4ad8dfaa1d3f2d271",
+         "output_idx":19
+      },
+      {
+         "value":476325,
+         "tx_hash":"32c2cf2adae996c628aa1a62d5975b069d9fa9263f48a0bf6aa09bce0e952852",
+         "output_idx":79
+      }
+   ]
+}

@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 public class UnspentTransactionHelper {
 
-    public static List<UnspentTransaction> getUnspentTransctions() {
+    public static List<UnspentTransaction> getUnspentTransactions() {
         UnspentTransaction unspentTransaction = new UnspentTransaction(
                 "b94313cb3d8ce36ad270d43fd155111a2495f43d8d156f9b570448d22f3dc739",
                 "39c73d2fd24804579b6f158d3df495241a1155d13fd470d26ae38c3dcb1343b9",

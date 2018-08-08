@@ -18,7 +18,7 @@ public class TransactionHandler implements ITransactionHandler {
     private final BlockchainExplorerClient blockchainExplorerClient;
 
     @Override
-    public final TransactionList getUnspentTransactions(String walletAddress) throws Exception {
+    public TransactionList getUnspentTransactions(String walletAddress) throws Exception {
         return TransactionList.builder()
                 .outputs(mapTransactions(blockchainExplorerClient.getUnspentTransactions(walletAddress)))
                 .build();

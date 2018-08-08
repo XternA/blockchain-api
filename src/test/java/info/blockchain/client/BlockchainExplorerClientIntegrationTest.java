@@ -23,7 +23,7 @@ class BlockchainExplorerClientIntegrationTest {
     @BeforeEach
     void setUp() {
         blockchainExplorerClient = new BlockchainExplorerClient(new RestTemplate(), new Gson());
-        expectedUnspentTransactions = UnspentTransactionHelper.getUnspentTransctions();
+        expectedUnspentTransactions = UnspentTransactionHelper.getUnspentTransactions();
     }
 
     @Test

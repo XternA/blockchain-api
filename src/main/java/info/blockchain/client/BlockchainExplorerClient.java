@@ -23,7 +23,7 @@ public class BlockchainExplorerClient {
             final String jsonResponse = restTemplate.getForObject("https://blockchain.info/unspent?active=" + walletAddress, String.class);
             return jsonConverter.fromJson(jsonResponse, UnspentTransactionList.class).getUnspentOutputs();
         } catch (HttpServerErrorException e) {
-            throw new RequestException("Something went wrong with the HTTP request. Please contact Blockchain.com for further assistance.", e);
+            throw new RequestException("HTTP Exception occurred. Please contact Blockchain.com for further assistance.", e);
         } catch (Exception e) {
             throw new RequestException("Something went wrong. Please contact Blockchain.com for further assistance.", e);
         }

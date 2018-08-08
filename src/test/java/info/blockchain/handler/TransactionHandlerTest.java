@@ -30,7 +30,7 @@ class TransactionHandlerTest {
     @BeforeEach
     void setUp() throws Exception {
         when(blockchainExplorerClient.getUnspentTransactions(anyString()))
-                .thenReturn(UnspentTransactionHelper.getUnspentTransctions());
+                .thenReturn(UnspentTransactionHelper.getUnspentTransactions());
     }
 
     @Test

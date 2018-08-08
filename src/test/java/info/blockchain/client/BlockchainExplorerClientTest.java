@@ -38,12 +38,12 @@ class BlockchainExplorerClientTest {
         blockchainExplorerClient = new BlockchainExplorerClient(restTemplate, new Gson());
 
         walletAddress = "1Aff4FgrtA1dZDwajmknWTwU2WtwUvfiXa";
-        expectedUnspentTransactions = UnspentTransactionHelper.getUnspentTransctions();
+        expectedUnspentTransactions = UnspentTransactionHelper.getUnspentTransactions();
     }
 
     @Test
     void getUnspentTransactions() throws Exception {
-        when(restTemplate.getForObject(anyString(), any())).thenReturn(RawJsonStringLoaderHelper.getRawJsonStringResponse("raw-json-response"));
+        when(restTemplate.getForObject(anyString(), any())).thenReturn(RawJsonStringLoaderHelper.getRawJsonStringResponse("raw-unspent-transaction-json-response"));
         List<UnspentTransaction> unspentTransactions = blockchainExplorerClient.getUnspentTransactions(walletAddress);
 
         verify(restTemplate, times(1)).getForObject(anyString(), any());
